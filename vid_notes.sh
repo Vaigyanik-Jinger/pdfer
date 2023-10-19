@@ -3,8 +3,11 @@
 mkdir temp
 cp $1.mp4 temp/
 cd temp
+echo "Please identify the timestamps where you want to start and end the transcription process."
 read -p "Enter the starting time (hh:mm:ss): " start_time
 read -p "Enter the ending time (hh:mm:ss): " end_time
+echo "Please identify the co-ordinates of the top-left and bottom-right corners of the screen that you want to grasp in the PDF." | lolcat
+echo "hover your mouse pointer over the image once the Image is displayed." 
 ffmpeg -i $1.mp4 -ss $start_time -vframes 1 starting_frame.png
 geeqie starting_frame.png &
 wait
@@ -26,6 +29,7 @@ for file in *.png; do
   ((counter++))
 done
 ls *png | sort -n | lolcat
+echo "You have to type the name of the files that you want to delete. Note them down somewhere separated by spaces" | lolcst
 geeqie .
 read -p "Enter the file names (without extensions) to delete, separated by space: " file_names
 IFS=' ' read -ra files_to_delete <<< "$file_names"
