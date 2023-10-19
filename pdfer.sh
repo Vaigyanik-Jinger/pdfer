@@ -1,6 +1,6 @@
 #!/bin/bash
 cwd=$pwd
-cp $HOME/Storage/projects/Video_Notes/* .
+cp $HOME/Pdfer/* .
 bash vid_notes.sh $1
 rm vid_notes.sh simpics.py
 
