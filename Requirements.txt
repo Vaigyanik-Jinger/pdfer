@@ -1,0 +1,8 @@
+ffmpeg
+geeqie
+rdfind
+imagemagick
+evince
+python
+Pillow
+imagehash
