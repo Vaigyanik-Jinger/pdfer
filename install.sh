@@ -67,7 +67,7 @@ sed -i '/pdfer/d' $CONFIG_FILE
 echo "$ALIAS_COMMAND" >> "$CONFIG_FILE"
 
 # Source the configuration file to make the alias available immediately in the current session
-source "$CONFIG_FILE"
+source $CONFIG_FILE
 
 # Display a message
 echo "Alias 'pdfer' added to $CONFIG_FILE and sourced. Please use the command in the following way."
