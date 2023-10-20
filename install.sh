@@ -50,7 +50,7 @@ ALIAS_COMMAND="alias pdfer='$SHELL_NAME ~/Pdfer/pdfer.sh'"
 
 
 # Alias to check
-ALIAS_TO_REMOVE="alias pdfer='$SHELL_NAME ~/Pdfer/pdfer.sh'"
+ALIAS_TO_REMOVE="pdfer"
 
 
 # Check the shell and append the alias accordingly
