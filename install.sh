@@ -48,6 +48,11 @@ SHELL_NAME=$(basename "$SHELL")
 # Your alias definition
 ALIAS_COMMAND="alias pdfer='$SHELL_NAME ~/Pdfer/pdfer.sh'"
 
+
+# Alias to check
+ALIAS_TO_REMOVE="alias pdfer='$SHELL_NAME ~/Pdfer/pdfer.sh'"
+
+
 # Check the shell and append the alias accordingly
 if [ "$SHELL_NAME" = "bash" ]; then
   CONFIG_FILE=~/.bashrc
@@ -57,6 +62,16 @@ else
   echo "Unsupported shell: $SHELL_NAME. Please add the alias manually to your shell configuration."
   echo "alias pdfer='<shell> ~/Pdfer/pdfer.sh'"
   exit 1
+fi
+
+
+# Check if the alias exists in .bashrc
+if grep -q "alias $ALIAS_TO_REMOVE=" $CONFIG_FILE; then
+  # Remove the alias from .bashrc
+  sed -i "/alias $ALIAS_TO_REMOVE=/d" $CONFIG_FILE
+  echo "Alias '$ALIAS_TO_REMOVE' has been removed from $CONFIG_FILE."
+else
+  echo "Alias '$ALIAS_TO_REMOVE' not found in $CONFIG_FILE."
 fi
 
 # Append the alias to the detected configuration file
