@@ -29,7 +29,7 @@ for file in *.png; do
   ((counter++))
 done
 ls *png | sort -n | lolcat
-echo "You have to type the name of the files that you want to delete. Note them down somewhere separated by spaces" | lolcst
+echo "You have to type the name of the files that you want to delete. Note them down somewhere separated by spaces" | lolcat
 geeqie .
 read -p "Enter the file names (without extensions) to delete, separated by space: " file_names
 IFS=' ' read -ra files_to_delete <<< "$file_names"
