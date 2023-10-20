@@ -6,7 +6,7 @@ cwd=$(pwd)
 # Function to run when Ctrl-C is pressed
 cleanup() {
   echo "Ctrl-C was pressed. Cleaning up before exiting..."
-  rm -r vid_notes.sh simpics.py temp
+  rm -r vid_notes.sh simpics.py pdfer.sh temp
   exit 1
 }
 
@@ -25,7 +25,7 @@ else
 fi
 
 # Clean up by removing copied files and specified scripts
-rm -r vid_notes.sh simpics.py
+rm -r vid_notes.sh simpics.py pdfer.sh temp
 
 # Return to the original working directory
 cd "$cwd"
