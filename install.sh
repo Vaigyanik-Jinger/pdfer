@@ -37,9 +37,9 @@ mkdir ~/Pdfer
 cd ~/Pdfer
 rm *
 
-wget https://github.com/Vaigyanik-Jinger/pdfer/blob/main/simpics.py
-wget https://github.com/Vaigyanik-Jinger/pdfer/blob/main/vid_notes.sh
-wget https://github.com/Vaigyanik-Jinger/pdfer/blob/main/pdfer.sh
+wget https://raw.github.com/Vaigyanik-Jinger/pdfer/blob/main/simpics.py
+wget https://raw.github.com/Vaigyanik-Jinger/pdfer/blob/main/vid_notes.sh
+wget https://raw.github.com/Vaigyanik-Jinger/pdfer/blob/main/pdfer.sh
 
 
 # Detect the user's shell
