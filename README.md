@@ -4,5 +4,5 @@ We presently support .mp4 format of video since this is in Beta.
 
 ## Install
 <pre>
-wget https://github.com/Vaigyanik-Jinger/pdfer/blob/main/install.sh
+wget https://github.com/Vaigyanik-Jinger/pdfer/blob/main/install.sh && bash install.sh
 </pre>
