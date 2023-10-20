@@ -9,7 +9,7 @@ for dep in "${system_dependencies[@]}"; do
         echo "Installing $dep..."
         if [ "$dep" == "imagemagick" ]; then
             # On some systems, 'imagemagick' may be 'convert'
-            sudo apt-get install imagemagick || sudo apt-get install graphicsmagick
+            sudo apt-get install -y imagemagick || sudo apt-get install -y graphicsmagick
         else
             sudo apt-get install -y "$dep"
         fi
