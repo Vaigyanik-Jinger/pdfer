@@ -1,5 +1,7 @@
 #! bin/bash/
 
+echo "Welcome to PDFer:- A CLI tool that converts MP4 files to PDFs. Created by Harsh Jinger. I hope it helps."
+
 mkdir temp
 cp $1.mp4 temp/
 cd temp
