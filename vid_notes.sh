@@ -26,11 +26,11 @@ python simpics.py temp 0 | lolcat
 cd temp
 counter=1
 for file in *.png; do
-  new_name="$counter.png"
-  mv -v "$file" "$new_name" | lolcat
+  new_name=$(printf "%03d.png" $counter)
+  mv "$file" "$new_name"
   ((counter++))
 done
-ls *png | sort -n | lolcat
+ls *png | lolcat
 echo "You have to type the name of the files that you want to delete. Note them down somewhere separated by spaces" | lolcat
 geeqie .
 read -p "Enter the file names (without extensions) to delete, separated by space: " file_names
